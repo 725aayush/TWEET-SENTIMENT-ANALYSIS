@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('final.jpg'); /* Aquatic background color */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.blur-background {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 2em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.input-section {
+    text-align: center;
+}
+
+.input-section h1 {
+    margin-bottom: 1em;
+}
+
+#tweet-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tweet-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.5em 2em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}

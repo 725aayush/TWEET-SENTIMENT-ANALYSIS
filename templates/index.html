@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="blur-background">
+            <section class="input-section">
+                <h1>Tweet Sentiment Analysis</h1>
+                <form id="tweet-form">
+                    <textarea id="tweet-input" rows="4" placeholder="Enter your tweet here..."></textarea>
+                    <button type="submit">Analyze Sentiment</button>
+                </form>
+                <div id="result"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tweet Sentiment Analysis</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

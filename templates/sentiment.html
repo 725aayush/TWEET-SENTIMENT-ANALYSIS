@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Results</title>
+    <link rel="stylesheet" href="s_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="blur-background sentiment-section">
+            <h1>Sentiment Analysis Results</h1>
+            <div class="sentiment-category">
+                <h2>😊 Positive</h2>
+                <p id="positive-value">0%</p>
+            </div>
+            <div class="sentiment-category">
+                <h2>😐 Neutral</h2>
+                <p id="neutral-value">0%</p>
+            </div>
+            <div class="sentiment-category">
+                <h2>😢 Negative</h2>
+                <p id="negative-value">0%</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tweet Sentiment Analysis</p>
+    </footer>
+
+    <script src="script_t.js"></script>
+</body>
+</html>
