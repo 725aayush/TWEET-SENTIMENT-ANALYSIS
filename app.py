@@ -7,15 +7,18 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/sentiment")
+def sentiment_page():
+    return render_template("sentiment.html")
+
 @app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json()
 
     if not data or "tweet" not in data:
-        return jsonify({"error": "Tweet text is required"}), 400
+        return jsonify({"error": "Tweet is required"}), 400
 
-    tweet = data["tweet"]
-    result = analyze_sentiment(tweet)
+    result = analyze_sentiment(data["tweet"])
     return jsonify(result)
 
 if __name__ == "__main__":
