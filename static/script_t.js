@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Assuming these values are dynamically set by some logic or fetched from an API
-    const positiveValue = 70; // Example value
-    const neutralValue = 20;  // Example value
-    const negativeValue = 10; // Example value
+const data = JSON.parse(localStorage.getItem("sentimentResult"));
 
-    document.getElementById('positive-value').textContent = `${positiveValue}%`;
-    document.getElementById('neutral-value').textContent = `${neutralValue}%`;
-    document.getElementById('negative-value').textContent = `${negativeValue}%`;
-});
+if (!data) {
+    alert("No data found. Please analyze a tweet first.");
+    window.location.href = "/";
+} else {
+    document.getElementById("positive-value").innerText = data.positive + "%";
+    document.getElementById("neutral-value").innerText = data.neutral + "%";
+    document.getElementById("negative-value").innerText = data.negative + "%";
+}
