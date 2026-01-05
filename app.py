@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from sentiment_analysis.tw_sentiment import analyze_sentiment
+from Sentiment_Analysis.tw_sentiment import analyze_sentiment
 
 app = Flask(__name__)
 
