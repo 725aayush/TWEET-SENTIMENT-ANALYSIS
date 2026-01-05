@@ -1,24 +1,22 @@
 from flask import Flask, request, jsonify, render_template
-import sys
-import os
-
-# Add the project directory to the system path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
-
-from Sentiment_Analysis.tw_sentiment import analyze_sentiment  # Import your sentiment analysis function
+from sentiment_analysis.tw_sentiment import analyze_sentiment
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route('/analyze', methods=['POST'])
+@app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json()
-    tweet = data['tweet']
-    sentiment_result = analyze_sentiment(tweet)
-    return jsonify(sentiment_result)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    if not data or "tweet" not in data:
+        return jsonify({"error": "Tweet text is required"}), 400
+
+    tweet = data["tweet"]
+    result = analyze_sentiment(tweet)
+    return jsonify(result)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
